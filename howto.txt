@@ -1,0 +1,6 @@
+0. The django project is already done. I have just cloned from github!
+1. pipenv -> pipfile, pipfile.lock || requirements.txt
+2. Create Dockerfile
+3. Create docker-compose.yml
+	- this is for more container. In our case for a django app (services:web) and a postgres database (services:db).
+	

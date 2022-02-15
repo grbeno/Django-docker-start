@@ -30,7 +30,7 @@ SECRET_KEY =  env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =  env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ] #  '.herokuapp.com', You can add more production url here!
+ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1', 'localhost', ] #  '.herokuapp.com', You can add more production url here!
 
 
 # Application definition
@@ -96,10 +96,10 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': env.str("DB_NAME", default="postgres"),
+            'NAME': 'postgres',
             'USER': 'postgres',
-            'PASSWORD': env.str("DB_PASSWORD", default="postgres"),
-            'HOST': 'localhost',
+            'PASSWORD': 'postgres',
+            'HOST': 'db',
             'PORT': 5432
         }
     }

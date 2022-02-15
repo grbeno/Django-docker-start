@@ -1,0 +1,28 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: django-docker-start
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - "SECRET_KEY=5aIqO9xiQuuMmfUZ8_dObRX__Rt3X9xtP5_FHmvq7y-WrUXOH_Q"
+      - "DEBUG=True"
+  db:
+    image: postgres:14
+    container_name: django-docker-start-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+volumes:
+  postgres_data:
+  
+ 
