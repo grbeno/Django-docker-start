@@ -1,6 +1,10 @@
 
-.env
 __pycache__/
+
+.env
+.venv
+
+# sqlite
 db.sqlite3
 
 # pipenv
