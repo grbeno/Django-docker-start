@@ -1,6 +1,27 @@
-0. The django project is already done. I have just cloned from github!
-1. pipenv -> pipfile, pipfile.lock || requirements.txt
-2. Create Dockerfile
-3. Create docker-compose.yml
-	- this is for more container. In our case for a django app (services:web) and a postgres database (services:db).
-	
+
+"""	How I made this django-docker-start:
+
+	My django project is already done. I have just cloned from https://github.com/grbeno/Django-start.git
+		- Create new repo for this project and changing the remote ($ git remote set-url origin ...)
+	Create Dockerfile
+		- pipenv -> pipfile, pipfile.lock || requirements.txt
+	Create docker-compose.yml
+		- this is for more container. In our case for a django app (services:web:) and a postgres database (services:db:).	"""
+
+HOW TO USE:
+
+1. Install docker if it is not installed yet!
+
+2. Download .zip from github to your project folder -> https://github.com/grbeno/Django-docker-start.git
+
+3. $ cd <your_project_folder>
+
+4. $ docker-compose build
+
+5. $ docker-compose up -d
+
+6. Call localhost in your browser to test!
+
+* You should generate new secret-key with: $ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))'
+* you should then create <.env> file in the main folder, export new secret-key, then call it as <web:environment:> in your <.yml> file with ${DJANGO_SECRET_KEY}!
+

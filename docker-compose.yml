@@ -12,7 +12,7 @@ services:
     depends_on:
       - db
     environment:
-      - "SECRET_KEY=5aIqO9xiQuuMmfUZ8_dObRX__Rt3X9xtP5_FHmvq7y-WrUXOH_Q"
+      - "SECRET_KEY=${DJANGO_SECRET_KEY}" # .env
       - "DEBUG=True"
   db:
     image: postgres:14
