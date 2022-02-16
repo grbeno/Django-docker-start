@@ -1,12 +1,13 @@
-## Django-start using Docker
-###### After cloning this repo and before running the necessary migration you can add custom user model as new app.
-<br/>
+## Django-docker-start
+##### After cloning this repo and before running the necessary migration you can add custom user model as new app.
 
-### HOW TO USE:
+### How to use:
 
 #### 1. Install docker if it is not installed yet!
 
 #### 2. Download .zip from github to your project folder -> https://github.com/grbeno/Django-docker-start.git
+
+#### 3. Docker commands:
 
 ```$ cd <your_project_folder>``` 
 
@@ -14,6 +15,6 @@
 
 ```$ docker-compose up -d```
 
-#### Call localhost in your browser to test!
+#### 4. Open browser and run localhost!
 
-##### * You should generate new secret-key with: $ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))', you should then create <.env> file in the main folder, export new secret-key, then call it as <web:environment:> in your <.yml> file with ${DJANGO_SECRET_KEY}!
+###### * You should generate new secret-key with: $ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))', you should then create <.env> file in the main folder, export new secret-key, then call it as <web:environment:> in your <.yml> file with ${DJANGO_SECRET_KEY}!
