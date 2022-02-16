@@ -5,15 +5,17 @@
 ### HOW TO USE:
 
 #### Install docker if it is not installed yet!
-<br/>
 
 #### Download .zip from github to your project folder -> https://github.com/grbeno/Django-docker-start.git
 
-''' $ cd <your_project_folder> '''
+'''$ cd <your_project_folder>
+'''
 
-''' $ docker-compose build '''
+'''$ docker-compose build
+'''
 
-''' $ docker-compose up -d '''
+'''$ docker-compose up -d
+'''
 
 #### Call localhost in your browser to test!
 
