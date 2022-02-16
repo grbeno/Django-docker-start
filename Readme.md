@@ -14,6 +14,10 @@
 
 ```$ docker-compose up -d```
 
+##### You can also migrate your data within docker:
+
+```$ docker-compose exec web python manage.py migrate```
+
 #### 4. Open browser and localhost!
 
-##### * You should generate new secret-key with: $ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))', you should then create <.env> file in the main folder, export new secret-key, then call it as <web:environment:> in your <.yml> file with ${DJANGO_SECRET_KEY}!
+##### ! You should generate new secret-key with: $ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))', you should then create <.env> file in the main folder, export new secret-key, then call it as <web:environment:> in your <.yml> file with ${DJANGO_SECRET_KEY}!
