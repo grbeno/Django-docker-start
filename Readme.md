@@ -2,9 +2,9 @@
 
 ### How to use:
 
-#### 1. Install docker if it is not installed yet!
+#### 1. Install docker if it is not installed yet
 
-#### 2. Download .zip from github to your project folder -> https://github.com/grbeno/Django-docker-start.git
+#### 2. Download .zip from github to your project folder
 
 #### 3. Docker commands:
 
@@ -24,4 +24,4 @@
 
 ```$ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))'```
 
-##### You should then create <.env> file in the main folder, export new secret-key, then call it as <web:environment:> in your <.yml> file with ${DJANGO_SECRET_KEY}!
+##### You should then create env file in the main folder, export new secret-key, then call it as <web:environment:> in your yml file with ${DJANGO_SECRET_KEY}!
