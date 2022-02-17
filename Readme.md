@@ -6,9 +6,9 @@
 
 #### 2. Download .zip from github to your project folder
 
-#### 3. Docker commands:
+```$ cd <your_project_folder>```
 
-```$ cd <your_project_folder>``` 
+#### 3. Run docker commands: 
 
 ```$ docker-compose build```
 
@@ -24,4 +24,4 @@
 
 ```$ docker-compose exec web python -c 'import secrets;print(secrets.token_urlsafe(38))'```
 
-##### You should then create env file in the main folder, export new secret-key, then call it as <web:environment:> in your yml file with ${DJANGO_SECRET_KEY}!
+##### You should then create .env file in the project folder, export new secret-key, then call it as in ( web: -> environment: ) - already set in your .yml file with ${DJANGO_SECRET_KEY}!
