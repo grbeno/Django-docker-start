@@ -18,7 +18,9 @@
 
 ```$ docker-compose exec web python manage.py migrate```
 
-#### 4. Open browser and localhost!
+#### 4. Open browser and run localhost!
+
+##### If everything is okay you can see the home page.
 
 ##### You should generate new secret-key with:
 
